@@ -4,8 +4,8 @@ pipeline {
 
     environment {
         SOLUTION_FILE = 'SeleniumBasicExercise.sln'
-        TEST_PROJECT_2_PATH = 'TestProject2/TestProject2.csproj'
-        TEST_PROJECT_3_PATH = 'TestProject3/TestProject3.csproj'
+        TEST_PROJECT_2_PATH = 'TestProject2\\TestProject2.csproj'
+        TEST_PROJECT_3_PATH = 'TestProject3\\TestProject3.csproj'
     }
 
     stages {
