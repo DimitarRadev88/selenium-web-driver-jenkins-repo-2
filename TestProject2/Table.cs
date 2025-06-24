@@ -8,13 +8,23 @@ namespace TestProject2
     [TestFixture]
     public class WorkingWithWebTable
     {
+        ChromeOptions options;
         IWebDriver driver;
 
         [SetUp]
         public void SetUp()
         {
+            options = new ChromeOptions();
+            options.AddArguments(
+                "headless",
+                "no-sandbox",
+                "disable-dev-shm-usage",
+                "disable-gpu",
+                "window-size=1920x1080",
+                "disable-extensions"
+            );
             // Create object of ChromeDriver
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
 
             // Add implicit wait
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
