@@ -10,7 +10,10 @@ pipeline {
 
     stages {
         stage('Checkout repo') {
-            checkout scm
+            steps {
+                checkout scm
+            }
+            
         }
 
         stage('Restore Dependencies') {
